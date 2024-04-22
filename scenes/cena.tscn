@@ -1,0 +1,102 @@
+[gd_scene load_steps=9 format=3 uid="uid://cys7ajpktot52"]
+
+[ext_resource type="PackedScene" uid="uid://citesc206udsu" path="res://bloco.tscn" id="1_ap40q"]
+[ext_resource type="Texture2D" uid="uid://lk0irbsegadf" path="res://icon.svg" id="1_yu76s"]
+[ext_resource type="Script" path="res://ball.gd" id="2_373da"]
+[ext_resource type="Script" path="res://player.gd" id="3_sjedp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_55k5b"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i1er4"]
+size = Vector2(179, 48)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbap6"]
+size = Vector2(112, 794)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lo3cy"]
+size = Vector2(1373, 80)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Cenario" type="Node2D" parent="."]
+
+[node name="StaticBody2D2" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(445, 413)
+
+[node name="StaticBody2D" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(559, 413)
+
+[node name="StaticBody2D3" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(672, 413)
+
+[node name="StaticBody2D4" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(401, 372)
+
+[node name="StaticBody2D5" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(515, 372)
+
+[node name="StaticBody2D6" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(628, 372)
+
+[node name="StaticBody2D7" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(442, 335)
+
+[node name="StaticBody2D8" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(556, 335)
+
+[node name="StaticBody2D9" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(669, 335)
+
+[node name="StaticBody2D10" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(379, 300)
+
+[node name="StaticBody2D11" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(493, 300)
+
+[node name="StaticBody2D12" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(606, 300)
+
+[node name="RigidBody2D" type="RigidBody2D" parent="Cenario"]
+position = Vector2(569, 540)
+gravity_scale = 0.0
+linear_damp_mode = 1
+script = ExtResource("2_373da")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cenario/RigidBody2D"]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("1_yu76s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/RigidBody2D"]
+shape = SubResource("CircleShape2D_55k5b")
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="Cenario"]
+position = Vector2(568, 596)
+up_direction = Vector2(0.00166666, -0.999999)
+script = ExtResource("3_sjedp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/CharacterBody2D"]
+shape = SubResource("RectangleShape2D_i1er4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Cenario/CharacterBody2D"]
+scale = Vector2(1.375, 0.382813)
+texture = ExtResource("1_yu76s")
+
+[node name="Paredes" type="Node2D" parent="."]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="Paredes"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/StaticBody2D"]
+position = Vector2(-55, 339)
+shape = SubResource("RectangleShape2D_wbap6")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Paredes/StaticBody2D"]
+position = Vector2(1209, 358)
+shape = SubResource("RectangleShape2D_wbap6")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="Paredes/StaticBody2D"]
+position = Vector2(578, -42)
+shape = SubResource("RectangleShape2D_lo3cy")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="Paredes/StaticBody2D"]
+position = Vector2(567, 694)
+shape = SubResource("RectangleShape2D_lo3cy")

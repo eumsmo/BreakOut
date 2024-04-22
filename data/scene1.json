@@ -1,0 +1,49 @@
+{
+	"local": "escola",
+	"timeline": [
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "professora"
+		},
+		{
+			"type": "fala",
+			"personagem": "professora",
+			"textos": [
+				"E assim, concluímos os nossos estudos"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Ah, aquilo foi só um sonho???",
+				"Eu realmente devia começar prestar atenção na aula..."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "professora",
+			"textos": [
+				"E não se esqueçam da prova de amanhã! A matéria é tudo que a gente viu até a aula de hoje."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "professora"	
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Ok, eu me ferrei."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "cena",
+			"cena": "data/scene1.json"	
+		}
+	]
+}

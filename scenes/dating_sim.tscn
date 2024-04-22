@@ -1,0 +1,202 @@
+[gd_scene load_steps=9 format=3 uid="uid://dtklbppk2xfub"]
+
+[ext_resource type="Texture2D" uid="uid://lk0irbsegadf" path="res://icon.svg" id="1_dm2hg"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_ilr88"]
+[ext_resource type="Texture2D" uid="uid://4g6f16sov1mr" path="res://imgs/estudante.png" id="2_e14yo"]
+[ext_resource type="JSON" path="res://data/location.json" id="2_s7io0"]
+[ext_resource type="JSON" path="res://data/personagens.json" id="3_fqhem"]
+[ext_resource type="JSON" path="res://data/scene1.json" id="4_wcass"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_o15y4"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_j7dkl"]
+font_size = 50
+
+[node name="Node2D" type="Node2D"]
+
+[node name="GameManager" type="Node" parent="."]
+script = ExtResource("1_ilr88")
+location = ExtResource("2_s7io0")
+personagens = ExtResource("3_fqhem")
+cena_atual = ExtResource("4_wcass")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+
+[node name="Background" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Background"]
+clip_contents = true
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -223.0
+offset_bottom = 617.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Background/VBoxContainer"]
+layout_mode = 2
+expand_mode = 4
+stretch_mode = 4
+
+[node name="Characters" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="PersonagensHolder" type="HBoxContainer" parent="Characters"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -672.0
+offset_top = -757.0
+offset_right = 672.0
+grow_horizontal = 2
+grow_vertical = 0
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="Characters/PersonagensHolder"]
+layout_mode = 2
+texture = ExtResource("2_e14yo")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="ColorRect" type="ColorRect" parent="Characters"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.0745098)
+
+[node name="Textbox" type="CanvasLayer" parent="."]
+follow_viewport_enabled = true
+
+[node name="Control" type="Control" parent="Textbox"]
+layout_mode = 3
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -679.5
+offset_top = -315.0
+offset_right = 679.5
+offset_bottom = -25.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="TextoHolder" type="ColorRect" parent="Textbox/Control"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1050.0
+offset_top = -202.0
+grow_horizontal = 0
+grow_vertical = 0
+color = Color(0.733333, 0.211765, 0.709804, 1)
+
+[node name="TextoLabel" type="Label" parent="Textbox/Control/TextoHolder"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -514.0
+offset_top = -90.0
+offset_right = 511.0
+offset_bottom = 89.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque interdum in ligula sit amet luctus. Pellentesque non laoreet tellus. Proin ut accumsan enim. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Etiam arcu lorem, feugiat molestie maximus ac, luctus nec nisl"
+label_settings = SubResource("LabelSettings_o15y4")
+autowrap_mode = 2
+
+[node name="Button" type="Button" parent="Textbox/Control/TextoHolder"]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -205.0
+offset_top = -68.0
+offset_right = -13.0
+offset_bottom = -13.0
+grow_horizontal = 0
+grow_vertical = 0
+theme_override_font_sizes/font_size = 32
+text = "Próximo"
+
+[node name="NomeLabel" type="Label" parent="Textbox/Control"]
+layout_mode = 1
+offset_left = 307.0
+offset_top = 14.0
+offset_right = 644.0
+offset_bottom = 89.0
+text = "Fulano de Tal
+"
+label_settings = SubResource("LabelSettings_j7dkl")
+
+[node name="PortraitHolder" type="ColorRect" parent="Textbox/Control"]
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -279.0
+offset_right = 283.0
+grow_vertical = 0
+color = Color(0.647059, 0.00392157, 0.854902, 1)
+
+[node name="Portrait" type="TextureRect" parent="Textbox/Control/PortraitHolder"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_dm2hg")
+expand_mode = 2
+
+[node name="Choice" type="CanvasLayer" parent="."]
+
+[node name="GridContainer" type="GridContainer" parent="Choice"]
+anchors_preset = -1
+anchor_left = 0.475
+anchor_top = 0.487
+anchor_right = 0.475
+anchor_bottom = 0.487
+offset_left = -224.475
+offset_top = -383.756
+offset_right = 239.525
+offset_bottom = 404.244
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Choice"]
+offset_right = 354.0
+offset_bottom = 792.0
+alignment = 1
+
+[node name="Button3" type="Button" parent="Choice/VBoxContainer"]
+layout_mode = 2
+text = "Botão com Texto aquieeeeee"
+
+[node name="Button" type="Button" parent="Choice/VBoxContainer"]
+layout_mode = 2
+text = "Botão com Texto aqui"
+
+[node name="Button2" type="Button" parent="Choice/VBoxContainer"]
+layout_mode = 2
+text = "Botão com Texto aqui"
+
+[node name="Button4" type="Button" parent="Choice/VBoxContainer"]
+layout_mode = 2
+text = "Botão com Texto aqui"

@@ -1,0 +1,12 @@
+{
+	"professora": {
+		"nome": "Professora",
+		"stand": "estudante.png",
+		"portrait": "icon.svg"
+	},
+	"eu": {
+		"nome": "Eu",
+		"stand": "estudante.png",
+		"portrait": "imgs/frank.jpeg"
+	}
+}
