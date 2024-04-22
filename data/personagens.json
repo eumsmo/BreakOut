@@ -1,12 +1,27 @@
 {
-	"professora": {
-		"nome": "Professora",
-		"stand": "estudante.png",
-		"portrait": "icon.svg"
-	},
 	"eu": {
 		"nome": "Eu",
 		"stand": "estudante.png",
-		"portrait": "imgs/frank.jpeg"
+		"portrait": "imgs/eu_portrait.png"
+	},
+	"professora": {
+		"nome": "Professora",
+		"stand": "professora.png",
+		"portrait": "imgs/professora_portrait.png"
+	},
+	"amigo": {
+		"nome": "Melhor Amigo",
+		"stand": "amigo.png",
+		"portrait": "imgs/amigo_portrait.png"
+	},
+	"ex": {
+		"nome": "O Ex",
+		"stand": "ex.png",
+		"portrait": "imgs/ex_portrait.png"
+	},
+	"crush": {
+		"nome": "Crush",
+		"stand": "crush.png",
+		"portrait": "imgs/crush_portrait.png"
 	}
 }

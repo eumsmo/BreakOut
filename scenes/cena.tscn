@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://cys7ajpktot52"]
 
 [ext_resource type="PackedScene" uid="uid://citesc206udsu" path="res://bloco.tscn" id="1_ap40q"]
-[ext_resource type="Texture2D" uid="uid://lk0irbsegadf" path="res://icon.svg" id="1_yu76s"]
+[ext_resource type="Texture2D" uid="uid://ds3p45pp7ouso" path="res://icon.svg" id="1_yu76s"]
 [ext_resource type="Script" path="res://ball.gd" id="2_373da"]
 [ext_resource type="Script" path="res://player.gd" id="3_sjedp"]
 

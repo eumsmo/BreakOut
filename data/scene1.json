@@ -37,13 +37,13 @@
 			"type": "fala",
 			"personagem": "eu",
 			"textos": [
-				"Ok, eu me ferrei."
+				"Ok, eu to fodido."
 			]
 		},
 		{
 			"type": "acao",
 			"acao": "cena",
-			"cena": "data/scene1.json"	
+			"cena": "data/scene2.json"	
 		}
 	]
 }

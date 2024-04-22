@@ -1,0 +1,169 @@
+{
+	"local": "frente-escola",
+	"timeline": [
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Ah, finalmente um ar livre."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "amigo",
+			"textos": [
+				"Ei, espera aí!"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "amigo"
+		},
+		{
+			"type": "fala",
+			"personagem": "amigo",
+			"textos": [
+				"Tá com pressa parça?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Ah, amigo! Foi mal, tive um sonho esquisito na aula, to meio avoado"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "amigo",
+			"textos": [
+				"Que não seja por isso, bora dar um rolê no arcade que você acorda fácil fácil"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Pô zé não posso, combinei de estudar com a crush hoje"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "amigo",
+			"textos": [
+				"Você ainda tá nessa? Mano, ela é um red flag ambulante"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "escolha",
+			"escolhas": [
+				{"texto": "É dessas que eu gosto", "caminho": "continuar"},
+				{"texto": "Ah é mesmo né, acho melhor eu QUEBRAR FORA", "caminho": "quebrar-fora"}
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "amigo",
+			"textos": [
+				"Ah vai ficar gadando mesmo? Flw então, tenho coisa melhor pra fazer."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "amigo"	
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Cara estranho.",
+				"Bem, agora é só esperar a-"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "crush"
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Ah, você está ai! :)"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"é-é-é-é-"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"O que foi, o gato comeu sua lingua?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Eu... eu- Desculpa, tive um sonho muito estranho"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Bem, você pode falar mais sobre ele no caminho pra minha casa? :3"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"SIM!"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "cena",
+			"cena": "data/scene1.json"	
+		}
+	],
+	"alternativo": {
+		"quebrar-fora": [
+			{
+				"type": "fala",
+				"personagem": "amigo",
+				"textos": [
+					"Assim que fala, finalmente um pouco de noção na cachola!",
+					"Bora lá jogar um pacman, mano"
+				]
+			},
+			{
+				"type": "fala",
+				"personagem": "eu",
+				"textos": [
+					"Vei tamo em 2024 o que cê ta falando?"
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "fim"
+			}
+		],
+		"continuar": [
+			{
+				"type": "acao",
+				"acao": "pular",
+				"para": "continuacao" 
+			}
+		]
+	}
+}

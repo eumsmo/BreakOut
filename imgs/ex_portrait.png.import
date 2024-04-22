@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://58nt6clp1dr1"
-path="res://.godot/imported/frank.jpeg-a571db6d7b421cf5ff8ced8370f41eb0.ctex"
+uid="uid://cd536bef0mllf"
+path="res://.godot/imported/ex_portrait.png-c763b38d6b2d4f7fbc457a643544e6a0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://imgs/frank.jpeg"
-dest_files=["res://.godot/imported/frank.jpeg-a571db6d7b421cf5ff8ced8370f41eb0.ctex"]
+source_file="res://imgs/ex_portrait.png"
+dest_files=["res://.godot/imported/ex_portrait.png-c763b38d6b2d4f7fbc457a643544e6a0.ctex"]
 
 [params]
 
