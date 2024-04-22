@@ -3,16 +3,26 @@ extends Node
 @export var location: Resource
 @export var personagens: Resource
 @export var cena_atual: Resource
+@export var prefab_button: Resource
+@export var prefab_window: Resource
+var botao_proximo
 
+var caminho_atual: String
 var timeline_index: int
 var fala_index: int
 
+var caminho_alternativo
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
+	botao_proximo = $"../Textbox/Control/TextoHolder/Button"
+	botao_proximo.visible = true
+	caminho_atual = "padrao"
 	limpar_personagens()
 	atualizar_cena()
 	
 	$"../Textbox/Control/TextoHolder/Button".pressed.connect(proxima_timeline)
+	
 
 func atualizar_cena():
 	var local = cena_atual.data.local
@@ -21,10 +31,14 @@ func atualizar_cena():
 	$"../Background/VBoxContainer/TextureRect".texture_filter = 1
 	timeline_index = 0
 	fala_index = 0
+	mostrar_escolha([])
 	atualizar_timeline()
 	
 func atualizar_timeline():
 	var atual = cena_atual.data.timeline[timeline_index]
+	
+	if caminho_atual == "alternativo":
+		atual = caminho_alternativo[timeline_index]
 	
 	if atual.type == "acao":
 		if atual.acao == "entra":
@@ -38,6 +52,15 @@ func atualizar_timeline():
 			atualizar_cena()
 		elif atual.acao == "escolha":
 			mostrar_escolha(atual.escolhas)
+		elif atual.acao == "pular":
+			pular_para(atual.para)
+		elif atual.acao == "animacao":
+			tocar_animacao()
+		elif atual.acao == "botao":
+			if atual.esconder:
+				some_botao()
+			else:
+				aparece_botao()
 	else:
 		mostrar_fala(atual)
 
@@ -83,4 +106,57 @@ func limpar_personagens():
 		N.queue_free()
 
 func mostrar_escolha(opcoes):
+	if opcoes.size() > 0:
+		botao_proximo.visible = false
 	
+	var pai = $"../Choice/BotaoHolder"
+	var quant = opcoes.size()
+	
+	for filho in pai.get_children():
+		filho.queue_free()
+	
+	for i in range(quant):
+		var novo_botao = prefab_button.instantiate()
+		pai.add_child(novo_botao)
+		novo_botao.text = opcoes[i].texto
+		novo_botao.pressed.connect(func():
+			for filho in pai.get_children():
+				filho.queue_free()
+			
+			botao_proximo.visible = true
+			ir_para_escolha(opcoes[i].caminho)
+		)
+		
+func ir_para_escolha(caminho):
+	print(caminho)
+	caminho_atual = "alternativo"
+	timeline_index = 0
+	fala_index = 0
+	caminho_alternativo = cena_atual.data.alternativo[caminho]
+	atualizar_timeline()
+
+func pular_para(identificador):
+	var index = -1
+	for i in range(cena_atual.data.timeline.size()):
+		var fala = cena_atual.data.timeline[i]
+		if "identificador" in fala and fala.identificador == identificador:
+			index = i
+			break
+			
+	caminho_atual = "padrao"
+	timeline_index = index
+	fala_index = 0
+	atualizar_timeline()
+
+func tocar_animacao():
+	var window = prefab_window.instantiate()
+	add_child(window)
+	proxima_timeline()
+
+func some_botao():
+	botao_proximo.visible = false
+	proxima_timeline()
+
+func aparece_botao():
+	botao_proximo.visible = true
+	proxima_timeline()

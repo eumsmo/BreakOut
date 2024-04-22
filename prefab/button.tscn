@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ccaba0usdhrcv"]
+
+[ext_resource type="Theme" uid="uid://tdksdoowb8g1" path="res://styles/button.tres" id="1_5urwo"]
+
+[node name="Button" type="Button"]
+theme = ExtResource("1_5urwo")
+text = "Botão com Texto aqui"

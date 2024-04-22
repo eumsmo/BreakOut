@@ -13,7 +13,12 @@ config_version=5
 config/name="e"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 
+[autoload]
+
+Global="*res://global.gd"
+
 [display]
 
 window/size/viewport_width=1401
 window/size/viewport_height=788
+window/subwindows/embed_subwindows=false

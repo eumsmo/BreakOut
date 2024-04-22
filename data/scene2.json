@@ -66,6 +66,7 @@
 		{
 			"type": "fala",
 			"personagem": "amigo",
+			"identificador": "continuacao",
 			"textos": [
 				"Ah vai ficar gadando mesmo? Flw então, tenho coisa melhor pra fazer."
 			]
@@ -133,7 +134,7 @@
 		{
 			"type": "acao",
 			"acao": "cena",
-			"cena": "data/scene1.json"	
+			"cena": "data/scene3.json"	
 		}
 	],
 	"alternativo": {

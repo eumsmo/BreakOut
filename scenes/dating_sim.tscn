@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dtklbppk2xfub"]
+[gd_scene load_steps=11 format=3 uid="uid://dtklbppk2xfub"]
 
 [ext_resource type="Texture2D" uid="uid://ds3p45pp7ouso" path="res://icon.svg" id="1_dm2hg"]
 [ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_ilr88"]
@@ -6,7 +6,8 @@
 [ext_resource type="JSON" path="res://data/personagens.json" id="3_fqhem"]
 [ext_resource type="JSON" path="res://data/scene1.json" id="4_wcass"]
 [ext_resource type="Texture2D" uid="uid://bw2ejangd0gpq" path="res://imgs/professora.png" id="5_p1rkh"]
-[ext_resource type="Theme" uid="uid://tdksdoowb8g1" path="res://styles/button.tres" id="7_yq23v"]
+[ext_resource type="PackedScene" uid="uid://ccaba0usdhrcv" path="res://prefab/button.tscn" id="7_ey32g"]
+[ext_resource type="PackedScene" uid="uid://ckgg4hxwnbhbn" path="res://prefab/window.tscn" id="8_rubyu"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o15y4"]
 font_size = 25
@@ -21,6 +22,8 @@ script = ExtResource("1_ilr88")
 location = ExtResource("2_s7io0")
 personagens = ExtResource("3_fqhem")
 cena_atual = ExtResource("4_wcass")
+prefab_button = ExtResource("7_ey32g")
+prefab_window = ExtResource("8_rubyu")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
@@ -62,12 +65,6 @@ grow_vertical = 0
 alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Characters/PersonagensHolder"]
-layout_mode = 2
-texture = ExtResource("5_p1rkh")
-expand_mode = 3
-stretch_mode = 4
-
-[node name="TextureRect2" type="TextureRect" parent="Characters/PersonagensHolder"]
 layout_mode = 2
 texture = ExtResource("5_p1rkh")
 expand_mode = 3
@@ -194,7 +191,7 @@ offset_top = -383.756
 offset_right = 239.525
 offset_bottom = 404.244
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Choice"]
+[node name="BotaoHolder" type="VBoxContainer" parent="Choice"]
 anchors_preset = 13
 anchor_left = 0.5
 anchor_right = 0.5
@@ -206,22 +203,5 @@ grow_vertical = 2
 theme_override_constants/separation = 24
 alignment = 1
 
-[node name="Button" type="Button" parent="Choice/VBoxContainer"]
+[node name="Button" parent="Choice/BotaoHolder" instance=ExtResource("7_ey32g")]
 layout_mode = 2
-theme = ExtResource("7_yq23v")
-text = "Botão com Texto aqui"
-
-[node name="Button2" type="Button" parent="Choice/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("7_yq23v")
-text = "Botão com Texto aqui"
-
-[node name="Button3" type="Button" parent="Choice/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("7_yq23v")
-text = "Botão com Texto aquieeeeee"
-
-[node name="Button4" type="Button" parent="Choice/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("7_yq23v")
-text = "Botão com Texto aqui"

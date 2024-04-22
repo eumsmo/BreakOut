@@ -1,0 +1,133 @@
+{
+	"local": "parque",
+	"timeline": [
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"E foi isso o meu sonho"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Nossa, quando eu disse pra me contar eu tava sendo educada kkkkkkk"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Ah- me desculpa, é que eu fiquei meio biruleibe das ideias"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Kkkkkkkk to só te zoando, eu gosto de te ver tão empolgado assim :)",
+				"Mas agora eu tenho uma pergunta muito séria a te fazer, tipo, de verdade..."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"É... ok? O que você... quer falar?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Quem ganharia: um bilhão de leões ou um de cada pokemon que existe?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Claramente um de cada pokemon! Cê já viu o tamanho de uns pokemons??? O rayquaza é gigante"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Escada de leão."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"O que?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Um leão em cima do outro. Um bilhão de leões, um em cima do outro."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "animacao"
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Tá mas e o Gardevoir que faz um buraco negro?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Mas e um buraco negro de leão?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Ah não. Mas dum Kyogre os leãos não ganha nem a pau, o cara inunda o mundo e acabo."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Mas e um sol de leão? Evapora a agua todinha."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"O Necrozma consegue engolir um sol."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Mas um bilhão de leão ele não consegue, tu sabe quanto que é um bilhão? É tipo, muito. "
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "botao",
+			"esconder": true
+		},
+		{
+			"type": "acao",
+			"acao": "cena",
+			"cena": "data/scene1.json"	
+		}
+	],
+	"alternativo": {}
+}
