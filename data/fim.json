@@ -1,0 +1,193 @@
+{
+	"local": "escuro",
+	"timeline": [
+		{
+			"type": "fala",
+			"personagem": "voce",
+			"textos": [
+				"...",
+				"Você... Você acordar em uma caverna escura e...",
+				"Quem eu estou tentando enganar?",
+				"..."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "amigo"
+		},
+		{
+			"type": "fala",
+			"personagem": "amigo",
+			"textos": [
+				"Ha..."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "amigo"
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "ex"
+		},
+		{
+			"type": "fala",
+			"personagem": "ex",
+			"textos": [
+				"Ha Ha..."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "ex"
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "professora"
+		},
+		{
+			"type": "fala",
+			"personagem": "professora",
+			"textos": [
+				"Ha Ha Ha!"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "professora"
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "crush"
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Uma grande piada"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "crush"
+		},
+		{
+			"type": "fala",
+			"personagem": "voce",
+			"textos": [
+				"Eu acho que você não precisava QUEBRAR FORA",
+				"Precisava?"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "escolha",
+			"escolhas": [
+				{"texto": "Sim", "caminho": "continuar"},
+				{"texto": "Não", "caminho": "continuar"}
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "voce",
+			"identificador": "pos-caminho",
+			"textos": [
+				"Sinceramente, não importa.",
+				"Você ganhou."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "amigo"
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "ex"
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "professora"
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "crush"
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Parabéns!"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "amigo"
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "ex"
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "professora"
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "crush"
+		},
+		{
+			"type": "fala",
+			"personagem": "voce",
+			"textos": [
+				"Você QUEBROU FORA.",
+				"Qual o seu último gesto?"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "escolha",
+			"escolhas": [
+				{"texto": "Obrigado! (Encerrar)", "caminho": "encerrar"},
+				{"texto": "Eu quero voltar. (Tentar Novamente?)", "caminho": "voltar"}
+			]
+		}
+	],
+	"alternativo": {
+		"continuar": [
+			{
+				"type": "acao",
+				"acao": "pular",
+				"para": "pos-caminho" 
+			}
+		],
+		"voltar": [
+			{
+				"type": "acao",
+				"acao": "cena",
+				"cena": "data/sonho.json"	
+			}
+		],
+		"encerrar": [
+			{
+				"type": "acao",
+				"acao": "encerrar"
+			}
+		]
+	}
+}

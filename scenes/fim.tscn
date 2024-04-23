@@ -1,0 +1,44 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcqqhl01ky3gu"]
+
+[ext_resource type="Script" path="res://scripts/TentarNovamente.gd" id="1_wl34i"]
+
+[node name="fim" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+offset_right = 1428.0
+offset_bottom = 812.0
+color = Color(0.0745098, 0.0745098, 0.0745098, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 23.0
+offset_top = 106.0
+offset_right = 391.0
+offset_bottom = 430.0
+theme_override_font_sizes/normal_font_size = 200
+text = "Fin"
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 19.0
+offset_top = -392.0
+offset_right = 821.0
+offset_bottom = -135.0
+grow_vertical = 0
+theme_override_font_sizes/normal_font_size = 40
+text = "Você QUEBROU FORA.
+Porém, isso foi uma boa decisão?
+Você sempre pode tentar novamente."
+
+[node name="Button" type="Button" parent="CanvasLayer"]
+offset_left = 11.0
+offset_top = 622.0
+offset_right = 380.0
+offset_bottom = 685.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_font_sizes/font_size = 40
+text = "Tentar Novamente"
+script = ExtResource("1_wl34i")

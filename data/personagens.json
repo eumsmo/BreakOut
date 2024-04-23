@@ -23,5 +23,10 @@
 		"nome": "Crush",
 		"stand": "crush.png",
 		"portrait": "imgs/crush_portrait.png"
+	},
+	"voce": {
+		"nome": "???",
+		"stand": "",
+		"portrait": "imgs/voce_portrait.png"
 	}
 }

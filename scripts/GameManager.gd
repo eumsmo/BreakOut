@@ -13,6 +13,10 @@ var fala_index: int
 
 var caminho_alternativo
 
+
+var cena_fim = preload("res://scenes/fim.tscn").instantiate()
+var cena_breakout = preload("res://scenes/cena.tscn").instantiate()
+
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	botao_proximo = $"../Textbox/Control/TextoHolder/Button"
@@ -29,6 +33,7 @@ func atualizar_cena():
 	var location_ref = location.data[local]
 	$"../Background/VBoxContainer/TextureRect".texture = load("res://imgs/" + location_ref)
 	$"../Background/VBoxContainer/TextureRect".texture_filter = 1
+	caminho_atual = "padrao"
 	timeline_index = 0
 	fala_index = 0
 	mostrar_escolha([])
@@ -61,11 +66,20 @@ func atualizar_timeline():
 				some_botao()
 			else:
 				aparece_botao()
+		elif atual.acao == "breakout":
+			get_tree().change_scene_to_file("res://scenes/cena.tscn")
+		elif atual.acao == "fim":
+			get_tree().change_scene_to_file("res://scenes/fim.tscn")
+		elif atual.acao == "encerrar":
+			get_tree().quit()
 	else:
 		mostrar_fala(atual)
 
 func proxima_timeline():
 	var atual = cena_atual.data.timeline[timeline_index]
+	if caminho_atual == "alternativo":
+		atual = caminho_alternativo[timeline_index]
+	
 	if atual.type == "fala" and fala_index < atual.textos.size() - 1:
 		fala_index += 1
 	else:

@@ -1,0 +1,234 @@
+{
+	"local": "casa",
+	"timeline": [
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Hahah, não deixa isso entrar muito na sua cabeça",
+				"É só que as coisas até agora tem sido bem... óbvias, não?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Óbvias?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"É... Esquece. Acho que to me antecipando",
+				"Mas olha só, já chegamos!"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"É aqui onde você mora?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Sim! Um típica e tradicional casa brasileira!",
+				"Bem, eu só preciso ver se meu pai tá em casa... Ele não gosta quando eu levo meninos pra cá"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"E quantos meninos você trouxe exatamente?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Hahah, não deixa isso entrar muito na sua cabeça",
+				"Não sou eu que encontro ex no meio de um date, sou?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Então isso era um date afinal de contas?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Eu pensei que esse era todo o ponto da nossa jornada, não?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Haha, pensei que ir atrás de algo a mais era uma ideia minha",
+				"Mas pelo visto eu que acabei caindo nos seus planos"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"No final das contas tudo é uma grande piada, não é mesmo?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Eu já vim aqui antes?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Talvez",
+				"Eu não lembraria. Já você...",
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Como assim?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Haha... Uma grande piada.",
+				"Eu acho que meu pai sabe que estamos aqui"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Tudo bem, a gente fala que veio só estudar, ele vai entender, não?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Eu já te disse... mas você não entendeu né?",
+				"Tudo bem, já estamos aqui mesmo",
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Eu não estou entendendo..."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Uma grande piada.",
+				""
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Como assim?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				""
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "voce",
+			"textos": [
+				"Não se preocupe, não é sua culpa"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				""
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "escolha",
+			"escolhas": [
+				{"texto": "Como assim?", "caminho": "quebrar-fora"},
+				{"texto": "Como assim?", "caminho": "quebrar-fora"},
+				{"texto": "Como assim?", "caminho": "quebrar-fora"},
+				{"texto": "Como assim?", "caminho": "quebrar-fora"}
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "cena",
+			"cena": "data/scene1.json"	
+		}
+	],
+	"alternativo": {
+		"quebrar-fora": [
+			{
+				"type": "fala",
+				"personagem": "crush",
+				"textos": [
+					""
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "sai",
+				"personagem": "crush"
+			},
+			{
+				"type": "fala",
+				"personagem": "voce",
+				"textos": [
+					"Alguma coisa sorri para você, do outro lado",
+					"Você entendeu agora?"
+				]
+			},
+			{
+				"type": "fala",
+				"personagem": "eu",
+				"textos": [
+					"",
+					"",
+					""
+				]
+			},
+			{
+				"type": "fala",
+				"personagem": "voce",
+				"textos": [
+					"Uma grande piada."
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "breakout"
+			}
+		]
+	}
+}

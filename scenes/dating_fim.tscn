@@ -1,13 +1,13 @@
-[gd_scene load_steps=11 format=3 uid="uid://dtklbppk2xfub"]
+[gd_scene load_steps=11 format=3 uid="uid://ceb08rwkq587x"]
 
-[ext_resource type="Texture2D" uid="uid://ds3p45pp7ouso" path="res://icon.svg" id="1_dm2hg"]
-[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_ilr88"]
-[ext_resource type="JSON" path="res://data/location.json" id="2_s7io0"]
-[ext_resource type="JSON" path="res://data/personagens.json" id="3_fqhem"]
-[ext_resource type="JSON" path="res://data/sonho.json" id="4_aw3lh"]
-[ext_resource type="Texture2D" uid="uid://bw2ejangd0gpq" path="res://imgs/professora.png" id="5_p1rkh"]
-[ext_resource type="PackedScene" uid="uid://ccaba0usdhrcv" path="res://prefab/button.tscn" id="7_ey32g"]
-[ext_resource type="PackedScene" uid="uid://ckgg4hxwnbhbn" path="res://prefab/window.tscn" id="8_rubyu"]
+[ext_resource type="Script" path="res://scripts/GameManager.gd" id="1_ntuj3"]
+[ext_resource type="JSON" path="res://data/location.json" id="2_0h2oc"]
+[ext_resource type="JSON" path="res://data/personagens.json" id="3_4lq2d"]
+[ext_resource type="JSON" path="res://data/fim.json" id="4_jk2m5"]
+[ext_resource type="PackedScene" uid="uid://ccaba0usdhrcv" path="res://prefab/button.tscn" id="5_w34he"]
+[ext_resource type="PackedScene" uid="uid://ckgg4hxwnbhbn" path="res://prefab/window.tscn" id="6_j8tqm"]
+[ext_resource type="Texture2D" uid="uid://bw2ejangd0gpq" path="res://imgs/professora.png" id="7_fsct3"]
+[ext_resource type="Texture2D" uid="uid://ds3p45pp7ouso" path="res://icon.svg" id="8_4yfrw"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_o15y4"]
 font_size = 25
@@ -19,12 +19,12 @@ font_size = 50
 position = Vector2(2, 0)
 
 [node name="GameManager" type="Node" parent="."]
-script = ExtResource("1_ilr88")
-location = ExtResource("2_s7io0")
-personagens = ExtResource("3_fqhem")
-cena_atual = ExtResource("4_aw3lh")
-prefab_button = ExtResource("7_ey32g")
-prefab_window = ExtResource("8_rubyu")
+script = ExtResource("1_ntuj3")
+location = ExtResource("2_0h2oc")
+personagens = ExtResource("3_4lq2d")
+cena_atual = ExtResource("4_jk2m5")
+prefab_button = ExtResource("5_w34he")
+prefab_window = ExtResource("6_j8tqm")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 limit_left = 0
@@ -67,7 +67,7 @@ alignment = 1
 
 [node name="TextureRect" type="TextureRect" parent="Characters/PersonagensHolder"]
 layout_mode = 2
-texture = ExtResource("5_p1rkh")
+texture = ExtResource("7_fsct3")
 expand_mode = 3
 stretch_mode = 4
 
@@ -176,7 +176,7 @@ offset_bottom = 142.5
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(0.975, 0.975)
-texture = ExtResource("1_dm2hg")
+texture = ExtResource("8_4yfrw")
 expand_mode = 2
 
 [node name="Choice" type="CanvasLayer" parent="."]
@@ -204,5 +204,5 @@ grow_vertical = 2
 theme_override_constants/separation = 24
 alignment = 1
 
-[node name="Button" parent="Choice/BotaoHolder" instance=ExtResource("7_ey32g")]
+[node name="Button" parent="Choice/BotaoHolder" instance=ExtResource("5_w34he")]
 layout_mode = 2

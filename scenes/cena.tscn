@@ -1,60 +1,159 @@
-[gd_scene load_steps=9 format=3 uid="uid://cys7ajpktot52"]
+[gd_scene load_steps=20 format=3 uid="uid://cys7ajpktot52"]
 
+[ext_resource type="Texture2D" uid="uid://d2lhovlrv6jkf" path="res://imgs/game/black.png" id="1_8fhwg"]
 [ext_resource type="PackedScene" uid="uid://citesc206udsu" path="res://bloco.tscn" id="1_ap40q"]
-[ext_resource type="Texture2D" uid="uid://ds3p45pp7ouso" path="res://icon.svg" id="1_yu76s"]
 [ext_resource type="Script" path="res://ball.gd" id="2_373da"]
+[ext_resource type="Texture2D" uid="uid://c2rd6vk3dfxdx" path="res://imgs/game/ball.png" id="3_6lanx"]
 [ext_resource type="Script" path="res://player.gd" id="3_sjedp"]
+[ext_resource type="Texture2D" uid="uid://nmgtit3cnquj" path="res://imgs/amigo.png" id="5_mej6t"]
+[ext_resource type="Texture2D" uid="uid://c8cwmcql28hmm" path="res://imgs/game/player.png" id="5_ni0tp"]
+[ext_resource type="Texture2D" uid="uid://b8pnbohf8trtr" path="res://imgs/ex.png" id="6_sb8qn"]
+[ext_resource type="Texture2D" uid="uid://bw2ejangd0gpq" path="res://imgs/professora.png" id="7_om5ge"]
+[ext_resource type="Texture2D" uid="uid://cjy5k322bt36k" path="res://imgs/crush.png" id="8_utlqp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_55k5b"]
+radius = 13.0
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i1er4"]
 size = Vector2(179, 48)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wbap6"]
-size = Vector2(112, 794)
+size = Vector2(112, 904)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lo3cy"]
-size = Vector2(1373, 80)
+size = Vector2(1803, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0jetf"]
+size = Vector2(1438, 109)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r1vxn"]
+size = Vector2(73, 119)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fdmn7"]
+size = Vector2(59, 103)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_infy3"]
+size = Vector2(63, 126)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_480y5"]
+size = Vector2(52, 127)
 
 [node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(707.5, 392.5)
+scale = Vector2(11.5234, 6.61719)
+texture = ExtResource("1_8fhwg")
 
 [node name="Cenario" type="Node2D" parent="."]
 
 [node name="StaticBody2D2" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(445, 413)
+position = Vector2(638, 442)
 
 [node name="StaticBody2D" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(559, 413)
+position = Vector2(752, 442)
 
 [node name="StaticBody2D3" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(672, 413)
+position = Vector2(865, 442)
 
 [node name="StaticBody2D4" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(401, 372)
+position = Vector2(593, 405)
 
 [node name="StaticBody2D5" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(515, 372)
+position = Vector2(707, 405)
 
 [node name="StaticBody2D6" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(628, 372)
+position = Vector2(820, 405)
 
 [node name="StaticBody2D7" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(442, 335)
+position = Vector2(634, 368)
 
 [node name="StaticBody2D8" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(556, 335)
+position = Vector2(748, 368)
 
 [node name="StaticBody2D9" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(669, 335)
+position = Vector2(861, 368)
 
 [node name="StaticBody2D10" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(379, 300)
+position = Vector2(571, 333)
 
 [node name="StaticBody2D11" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(493, 300)
+position = Vector2(685, 333)
 
 [node name="StaticBody2D12" parent="Cenario" instance=ExtResource("1_ap40q")]
-position = Vector2(606, 300)
+position = Vector2(798, 333)
+
+[node name="StaticBody2D13" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(302, 442)
+
+[node name="StaticBody2D14" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(416, 442)
+
+[node name="StaticBody2D15" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(529, 442)
+
+[node name="StaticBody2D16" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(257, 405)
+
+[node name="StaticBody2D17" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(371, 405)
+
+[node name="StaticBody2D18" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(484, 405)
+
+[node name="StaticBody2D19" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(298, 368)
+
+[node name="StaticBody2D20" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(412, 368)
+
+[node name="StaticBody2D21" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(525, 368)
+
+[node name="StaticBody2D22" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(235, 333)
+
+[node name="StaticBody2D23" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(349, 333)
+
+[node name="StaticBody2D24" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(462, 333)
+
+[node name="StaticBody2D25" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(973, 442)
+
+[node name="StaticBody2D26" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(1087, 442)
+
+[node name="StaticBody2D27" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(1200, 442)
+
+[node name="StaticBody2D28" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(928, 405)
+
+[node name="StaticBody2D29" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(1042, 405)
+
+[node name="StaticBody2D30" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(1155, 405)
+
+[node name="StaticBody2D31" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(969, 368)
+
+[node name="StaticBody2D32" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(1083, 368)
+
+[node name="StaticBody2D33" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(1196, 368)
+
+[node name="StaticBody2D34" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(906, 333)
+
+[node name="StaticBody2D35" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(1020, 333)
+
+[node name="StaticBody2D36" parent="Cenario" instance=ExtResource("1_ap40q")]
+position = Vector2(1133, 333)
 
 [node name="RigidBody2D" type="RigidBody2D" parent="Cenario"]
 position = Vector2(569, 540)
@@ -64,13 +163,14 @@ script = ExtResource("2_373da")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cenario/RigidBody2D"]
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("1_yu76s")
+texture = ExtResource("3_6lanx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Cenario/RigidBody2D"]
 shape = SubResource("CircleShape2D_55k5b")
 
 [node name="CharacterBody2D" type="CharacterBody2D" parent="Cenario"]
-position = Vector2(568, 596)
+position = Vector2(759, 737)
+motion_mode = 1
 up_direction = Vector2(0.00166666, -0.999999)
 script = ExtResource("3_sjedp")
 
@@ -78,25 +178,68 @@ script = ExtResource("3_sjedp")
 shape = SubResource("RectangleShape2D_i1er4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Cenario/CharacterBody2D"]
-scale = Vector2(1.375, 0.382813)
-texture = ExtResource("1_yu76s")
+scale = Vector2(0.438423, 0.382813)
+texture = ExtResource("5_ni0tp")
 
 [node name="Paredes" type="Node2D" parent="."]
 
 [node name="StaticBody2D" type="StaticBody2D" parent="Paredes"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/StaticBody2D"]
-position = Vector2(-55, 339)
+position = Vector2(-55, 394)
 shape = SubResource("RectangleShape2D_wbap6")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="Paredes/StaticBody2D"]
-position = Vector2(1209, 358)
+position = Vector2(1460, 373)
 shape = SubResource("RectangleShape2D_wbap6")
 
 [node name="CollisionShape2D3" type="CollisionShape2D" parent="Paredes/StaticBody2D"]
 position = Vector2(578, -42)
 shape = SubResource("RectangleShape2D_lo3cy")
 
-[node name="CollisionShape2D4" type="CollisionShape2D" parent="Paredes/StaticBody2D"]
-position = Vector2(567, 694)
-shape = SubResource("RectangleShape2D_lo3cy")
+[node name="StaticBody2D" type="StaticBody2D" parent="Paredes/StaticBody2D/CollisionShape2D3" groups=["chao"]]
+position = Vector2(300, 964)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Paredes/StaticBody2D/CollisionShape2D3/StaticBody2D"]
+position = Vector2(-168, -18.5)
+shape = SubResource("RectangleShape2D_0jetf")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." groups=["personagens"]]
+position = Vector2(300, 188)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(4.5, -2)
+shape = SubResource("RectangleShape2D_r1vxn")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D"]
+texture = ExtResource("5_mej6t")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." groups=["personagens"]]
+position = Vector2(565, 122)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2"]
+position = Vector2(1.5, 1.5)
+shape = SubResource("RectangleShape2D_fdmn7")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2"]
+texture = ExtResource("6_sb8qn")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." groups=["personagens"]]
+position = Vector2(835, 181)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3"]
+position = Vector2(0.5, 3)
+shape = SubResource("RectangleShape2D_infy3")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D3"]
+texture = ExtResource("7_om5ge")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." groups=["personagens"]]
+position = Vector2(1113, 134)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4"]
+position = Vector2(2, 0.5)
+shape = SubResource("RectangleShape2D_480y5")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D4"]
+texture = ExtResource("8_utlqp")

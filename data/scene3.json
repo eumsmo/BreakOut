@@ -5,6 +5,7 @@
 			"type": "fala",
 			"personagem": "eu",
 			"textos": [
+				"[Conto todo o meu sonho]",
 				"E foi isso o meu sonho"
 			]
 		},
@@ -73,10 +74,6 @@
 			]
 		},
 		{
-			"type": "acao",
-			"acao": "animacao"
-		},
-		{
 			"type": "fala",
 			"personagem": "eu",
 			"textos": [
@@ -112,6 +109,10 @@
 			]
 		},
 		{
+			"type": "acao",
+			"acao": "animacao"
+		},
+		{
 			"type": "fala",
 			"personagem": "crush",
 			"textos": [
@@ -120,14 +121,219 @@
 		},
 		{
 			"type": "acao",
-			"acao": "botao",
-			"esconder": true
+			"acao": "entra",
+			"personagem": "ex"
+		},
+		{
+			"type": "fala",
+			"personagem": "ex",
+			"textos": [
+				"Ora ora, o que temos aqui?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"É.... oi? A gente tava conversa-"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "ex",
+			"textos": [
+				"Eu lá to falando com você? Meu papo é com S/N."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"O que? S/N quem é esse cara?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Ah... ele é o meu ex... Eu não sei o que ele tá fazendo aqui"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "ex",
+			"textos": [
+				"O que eu to fazendo aqui?",
+				"Eu estou aqui para te lembrar que você merece melhor que essa baranga."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Oi?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "ex",
+			"textos": [
+				"Sshhh, se eu quisesse falar com cachorra eu virava veterinario."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Ei, olha como você fala com ela.",
+				"A gente já terminou, o que você pensa que está fazendo?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "ex",
+			"textos": [
+				"Eu percebi que eu preciso de você tanto quanto você precisa de mim!",
+				"A gente acabou de terminar e olha com que você ta se metendo.",
+				"Sinceramente eu esperava mais."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Tu acha que eu sou quem pra falar assim comigo?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "ex",
+			"textos": [
+				"Querida, quando a conversa abaixar até o seu nivel eu te aviso, ok?",
+				"Enfim, eu sei que apesar de tudo, você quer vir comigo. Então, porque não vem?",
+				"Larga essazinha e vem pra minha casa estudar ou sei lá o que chamam hoje em dia."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "escolha",
+			"escolhas": [
+				{"texto": "Segue em frente pelo amor de deus", "caminho": "continuar"},
+				{"texto": "Melhor QUEBRAR FORA e ficar com meu ex", "caminho": "quebrar-fora"}
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "ex",
+			"identificador": "continuacao",
+			"textos": [
+				"É sério isso?",
+				"Quer saber, tudo bem, vai lá.",
+				"Eu te dei essa chance porque eu tava como dó, mas se você quer continuar sendo burro, quem sou eu."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "ex"
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Nossa, me desculpa. Eu nem sei o que falar... O meu ex é... Complicado."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Tá tudo bem, sério"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Não, não tá tudo bem.",
+				"Deixa eu te pagar um sorvete, pode ser? Eu sei que não justifica mas-"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Se você adimitir que um bilhão de leões..."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Ok, um bilhão de leões realmente é bastante."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Que bom que você finalmente entendeu :)",
+				"Agora vamos lá tomar o sorvete"
+			]
 		},
 		{
 			"type": "acao",
 			"acao": "cena",
-			"cena": "data/scene1.json"	
+			"cena": "data/scene4.json"	
 		}
 	],
-	"alternativo": {}
+	"alternativo": {
+		"quebrar-fora": [
+			{
+				"type": "fala",
+				"personagem": "ex",
+				"textos": [
+					"Finalmente um escolha inteligente."
+				]
+			},
+			{
+				"type": "fala",
+				"personagem": "crush",
+				"textos": [
+					"É sério isso?"
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "sai",
+				"personagem": "crush"
+			},
+			{
+				"type": "fala",
+				"personagem": "ex",
+				"textos": [
+					"Então é isso, vamos lá pra casa que eu vou te dar uma geral",
+					"Só não conta pro seu melhor amigo que ele ainda não gosta de mim"
+				]
+			},
+			{
+				"type": "fala",
+				"personagem": "eu",
+				"textos": [
+					"Essa definitivamente foi uma das escolhas ja feitas..."
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "fim"
+			}
+		],
+		"continuar": [
+			{
+				"type": "acao",
+				"acao": "pular",
+				"para": "continuacao" 
+			}
+		]
+	}
 }

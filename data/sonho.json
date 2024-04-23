@@ -1,0 +1,162 @@
+{
+	"local": "escuro",
+	"timeline": [
+		{
+			"type": "fala",
+			"personagem": "voce",
+			"textos": [
+				"Você acorda em uma caverna escura, conseguindo enxergar apenas o que está diretamente em sua frente",
+				"Uma interseção. Essa é a primeira vez que você encontra uma.",
+				"De um lado, um caminho que se extende por distâncias desconhecidas.",
+				"Do outro, um caminho bloqueado.",
+				"O que você faz?"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "escolha",
+			"escolhas": [
+				{"texto": "Ir pelo caminho desconhecido", "caminho": "continuar-1"},
+				{"texto": "Quebrar o bloqueio e seguir caminho", "caminho": "quebrar-fora-1"}
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "voce",
+			"identificador": "pos-caminho-1",
+			"textos": [
+				"Você segue pelo desconhecido, confuso do porquê de tudo isso.",
+				"Mais a diante, ainda na escuridão, apenas um vulto semelhante ao seu pode ser visto.",
+				"Você tentaria chamá-lo, porém a sua voz não é sua. Isso te apavora.",
+				"O vulto que julga conhecer se encontra do outro lado de um abismo.",
+				"O que você faz?"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "escolha",
+			"escolhas": [
+				{"texto": "Seguir o caminho desconhecido", "caminho": "continuar-2"},
+				{"texto": "Tentar atravessar o abismo", "caminho": "quebrar-fora-2"}
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "voce",
+			"identificador": "pos-caminho-2",
+			"textos": [
+				"Você continua pela escuridão, sem rumo ou perspectiva.",
+				"Muitos como você estão parados no caminho, porém não chamam tanto a atenção.",
+				"Dizem que errados estavam de sair de onde acordaram, uma vez que o caminho sem destino só leva a perdição.",
+				"Clamam que não há motivo para seguir em frente, porém que ali encontraria pertencimento.",
+				"O que você faz?"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "escolha",
+			"escolhas": [
+				{"texto": "Persistir pelo caminho desconhecido", "caminho": "continuar-3"},
+				{"texto": "Se sentar com seus irmãos", "caminho": "quebrar-fora-3"}
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "voce",
+			"identificador": "pos-caminho-3",
+			"textos": [
+				"Você insiste no desconhecido",
+				"Apesar de escuro, uma luz te guiou até esse momento.",
+				"Não tem motivo mais para interseções, você sempre seguirá em frente.",
+				"Finalmente no fim do tunel você encontra a luz que te ancorava.",
+				"Posta diante 3 estátuas, sua sombra escurece a caverna.",
+				"Para além dela, uma grande piada.",
+				"Você pode tentar quebrar fora, mas tudo que encontrará são sombras.",
+				"O que você faz?",
+				"Você se aproxima da luz e na distância enxerga um vulto além do abismo.",
+				"Um sorriso é a unica coisa que consegue esboçar, enquanto alimenta a luz.",
+				"Quanto tempo faz que você esta aqui?",
+				"Já deu a hora de acordar novamente.",
+				"E assim, concluímos nossos estudos"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "cena",
+			"cena": "data/scene1.json"	
+		}
+	],
+	"alternativo": {
+		"quebrar-fora-1": [
+			{
+				"type": "fala",
+				"personagem": "voce",
+				"textos": [
+					"Você quebra em esperança de encontrar algo além, porém ainda não é a sua hora.",
+					"Você se sente burro.",
+					"E assim, concluímos nossos estudos"
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "cena",
+				"cena": "data/scene1.json"	
+			}
+		],
+		"continuar-1": [
+			{
+				"type": "acao",
+				"acao": "pular",
+				"para": "pos-caminho-1" 
+			}
+		],
+		"quebrar-fora-2": [
+			{
+				"type": "fala",
+				"personagem": "voce",
+				"textos": [
+					"Você esperançosamente tenta trilhar um caminho para além do abismo.",
+					"Tão perto, porém tão longe, você se vê caindo no vazio.",
+					"Você perde a esperança.",
+					"E assim, concluímos nossos estudos"
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "cena",
+				"cena": "data/scene1.json"	
+			}
+		],
+		"continuar-2": [
+			{
+				"type": "acao",
+				"acao": "pular",
+				"para": "pos-caminho-2" 
+			}
+		],
+		"quebrar-fora-3": [
+			{
+				"type": "fala",
+				"personagem": "voce",
+				"textos": [
+					"Sua jornada foi longa, porém não havia propósito algum.",
+					"Pelo menos agora, você está acompanhado daqueles que também desistiram.",
+					"Vocês permanecerão os mesmos.",
+					"E assim, concluímos nossos estudos"
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "cena",
+				"cena": "data/scene1.json"	
+			}
+		],
+		"continuar-3": [
+			{
+				"type": "acao",
+				"acao": "pular",
+				"para": "pos-caminho-3" 
+			}
+		],
+	}
+}

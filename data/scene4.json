@@ -1,0 +1,284 @@
+{
+	"local": "sorvete",
+	"timeline": [
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Ok, chegamos.",
+				"Pode pegar oque quiser que eu pago"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Seu ex bem que podia aparecer mais vezes",
+				"Adoro receber coisa de graça"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Hahaha..... é... não.",
+				"Mas enfim, vamos deixar isso de lado e-"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "professora",
+			"textos": [
+				"Nem parece que tem prova amanhã em"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Pera, o que?"
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "entra",
+			"personagem": "professora"
+		},
+		{
+			"type": "fala",
+			"personagem": "professora",
+			"textos": [
+				"Assim, cada um é cada um, mas eu não estaria tão tranquilo assim se eu tivesse as mesmas notas que vocês..."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Não é possivel."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Professora! O que você está fazendo aqui?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "professora",
+			"textos": [
+				"Vim comprar pote de feijão.",
+				"O que cê acha que eu to fazendo aqui? To trabalhando."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Mas eu pensei que você já tinha um emprego..."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "professora",
+			"textos": [
+				"Não não, eu vou pra escola porque eu gosto de um tanto de jovem gritando na minha orelha",
+				"Senhor, eu falhei convosco.",
+				"Eu tenho dois empregos."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Nossa que legal, sabe quem mais tem dois empregos?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "professora",
+			"textos": [
+				"Não sei e sinceramente eu não poderia estar menos interessada",
+				"Não to aqui pra ficar de papo e nem vocês deviam"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"A gente só veio descansar um pouco"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "professora",
+			"textos": [
+				"Ah claro, descansa agora e daqui a 20 anos tu me fala onde isso te levou",
+				"Cês acha que eu sou inocente? Sei muito bem que vocês não vão estudar",
+				"Eu sei como tá a prova e eu estudaria se fosse vocês."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "escolha",
+			"escolhas": [
+				{"texto": "Vamos pegar o sorvete logo", "caminho": "continuar"},
+				{"texto": "Acho melhor QUEBRAR FORA para estudar", "caminho": "quebrar-fora"}
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "professora",
+			"identificador": "continuacao",
+			"textos": [
+				"Haha. Tudo bem então, você se divirtam",
+				"Amanhã é um outro dia."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "sai",
+			"personagem": "professora"
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"O que foi isso?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Se eu encontrasse meus alunos fora da escola eu também ficaria biluteteia",
+				"Mas enfim, acho bom a gente já ir pra minha casa, vai que a gente encontra mais alguém?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Kkkkkkkkkkkk realmente, bora logo antes que todos os outros personagens que nunca apareceram antes decidam aparecer."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Sim! Curioso que a gente encontrou a professora de todas as pessoas né"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Até parece que os roteristas das nossas vidas não queria ter que fazer mais um personagem só pra isso."
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"*O roterista :)",
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"?"
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "crush",
+			"textos": [
+				"Acho que é só um roterista pra gente :)",
+			]
+		},
+		{
+			"type": "fala",
+			"personagem": "eu",
+			"textos": [
+				"Hmm... Não sei muito bem o que isso significa..."
+			]
+		},
+		{
+			"type": "acao",
+			"acao": "cena",
+			"cena": "data/scene5.json"	
+		}
+	],
+	"alternativo": {
+		"quebrar-fora": [
+			{
+				"type": "fala",
+				"personagem": "crush",
+				"textos": [
+					"Ah, sério? A gente já tá tão perto de casa..."
+				]
+			},
+			{
+				"type": "fala",
+				"personagem": "professora",
+				"textos": [
+					"Finalmente um pouco de noção"
+				]
+			},
+			{
+				"type": "fala",
+				"personagem": "eu",
+				"textos": [
+					"Desculpa, mas eu realmente preciso estudaar..."
+				]
+			},
+			{
+				"type": "fala",
+				"personagem": "crush",
+				"textos": [
+					"Aff, tudo bem então. Tchau."
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "sai",
+				"personagem": "crush"
+			},
+			{
+				"type": "fala",
+				"personagem": "professora",
+				"textos": [
+					"Não fica assim, eu já estive nos seus pés, você fez a escolha certa",
+					"Agora para de bucetão e vai estudar."
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "sai",
+				"personagem": "professora"
+			},
+			{
+				"type": "fala",
+				"personagem": "eu",
+				"textos": [
+					"Huh...",
+					"Acho que vou estudar então?"
+				]
+			},
+			{
+				"type": "acao",
+				"acao": "fim"
+			}
+		],
+		"continuar": [
+			{
+				"type": "acao",
+				"acao": "pular",
+				"para": "continuacao" 
+			}
+		]
+	}
+}
